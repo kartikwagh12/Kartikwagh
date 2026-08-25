@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kartik Wagh - Personal Website">
+  <meta name="theme-color" content="#111111">
+  <title>Kartik Wagh | Personal Website</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      background:#f5f5f5;color:#111;line-height:1.6;
+    }
+    nav{
+      position:fixed;top:0;left:0;width:100%;z-index:1000;
+      background:rgba(17,17,17,.94);backdrop-filter:blur(10px);
+      display:flex;justify-content:center;gap:10px;padding:12px;
+    }
+    nav a{
+      color:#fff;text-decoration:none;padding:8px 12px;border-radius:20px;
+      font-size:14px;
+    }
+    nav a:hover{background:#333}
+    section{padding:90px 20px;max-width:1050px;margin:auto}
+    .hero{
+      min-height:100vh;display:flex;align-items:center;justify-content:center;
+      text-align:center;background:#111;color:#fff;padding-top:110px;
+    }
+    .hero-inner{max-width:750px}
+    .avatar{
+      width:120px;height:120px;border-radius:50%;margin:0 auto 22px;
+      background:#fff;color:#111;display:flex;align-items:center;justify-content:center;
+      font-size:42px;font-weight:800;border:4px solid #555;
+    }
+    h1{font-size:clamp(42px,9vw,76px);line-height:1.05;margin-bottom:14px}
+    .hero p{font-size:19px;color:#ccc;margin-bottom:28px}
+    .btn{
+      display:inline-block;text-decoration:none;background:#fff;color:#111;
+      padding:12px 20px;border-radius:28px;font-weight:bold;margin:5px;
+      transition:.2s;
+    }
+    .btn:hover{transform:translateY(-2px);background:#ddd}
+    .section-title{text-align:center;font-size:34px;margin-bottom:35px}
+    .about{text-align:center;max-width:760px}
+    .cards{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;
+    }
+    .card{
+      background:#fff;border:1px solid #ddd;border-radius:18px;padding:24px;
+      box-shadow:0 8px 25px rgba(0,0,0,.06);
+    }
+    .card h3{margin-bottom:8px}
+    .skills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+    .skill{
+      background:#111;color:#fff;padding:10px 16px;border-radius:25px;
+    }
+    .contact{text-align:center}
+    .contact-buttons{margin-top:20px}
+    .mood{
+      background:#111;color:#fff;border-radius:28px;text-align:center;
+      max-width:850px;margin:30px auto;padding:45px 20px;
+    }
+    .mood h2{font-size:38px;margin-bottom:8px}
+    .mood p{color:#bbb}
+    .emojis{
+      display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:28px 0;
+    }
+    .emoji{
+      width:64px;height:64px;border:2px solid #444;border-radius:50%;
+      background:#1c1c1c;font-size:32px;cursor:pointer;
+      transition:.2s;
+    }
+    .emoji:hover,.emoji.selected{
+      transform:scale(1.12);border-color:#fff;background:#333;
+    }
+    #moodMessage{min-height:28px;font-weight:bold}
+    footer{
+      background:#111;color:#fff;text-align:center;padding:28px 20px;
+    }
+    footer span{font-weight:bold}
+    @media(max-width:600px){
+      nav{justify-content:flex-start;overflow-x:auto;white-space:nowrap}
+      section{padding:75px 16px}
+      .hero{padding:100px 16px 50px}
+      .card{padding:20px}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#mood">Mood Scan</a>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="avatar">KW</div>
+      <h1>Kartik Wagh</h1>
+      <p>Welcome to my personal website.</p>
+      <a class="btn" href="#about">Explore My Website</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about card">
+      <p>
+        Hello! I’m <strong>Kartik Wagh</strong>. This is my personal website
+        where you can learn a little about me, my skills and my projects.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">C</span>
+      <span class="skill">Python</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Personal Website</h3>
+        <p>A responsive personal website created for Kartik Wagh.</p>
+      </div>
+      <div class="card">
+        <h3>Car World</h3>
+        <p>A car-themed web project with car information and modern design.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>You can connect with me using the buttons below.</p>
+    <div class="contact-buttons">
+      <!-- Replace the # links below with your real links -->
+      <a class="btn" href="#" onclick="alert('Add your WhatsApp number/link in the HTML code.');return false;">WhatsApp</a>
+      <a class="btn" href="#" onclick="alert('Add your Instagram link in the HTML code.');return false;">Instagram</a>
+      <a class="btn" href="#" onclick="alert('Add your YouTube link in the HTML code.');return false;">YouTube</a>
+    </div>
+  </section>
+
+  <section id="mood">
+    <div class="mood">
+      <h2>😊 Mood Scan</h2>
+      <p>How are you feeling?</p>
+
+      <div class="emojis">
+        <button class="emoji" onclick="selectMood(this,'Happy 😊 — Keep smiling!')">😊</button>
+        <button class="emoji" onclick="selectMood(this,'Cool 😎 — Have a great day!')">😎</button>
+        <button class="emoji" onclick="selectMood(this,'Okay 😐 — Take it easy!')">😐</button>
+        <button class="emoji" onclick="selectMood(this,'Sleepy 😴 — Get some good rest!')">😴</button>
+        <button class="emoji" onclick="selectMood(this,'Excited 😍 — Enjoy the moment!')">😍</button>
+      </div>
+
+      <div id="moodMessage">Select an emoji above.</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Create by <span>Kartik Wagh</span></p>
+  </footer>
+
+  <script>
+    function selectMood(button, message){
+      document.querySelectorAll('.emoji').forEach(function(item){
+        item.classList.remove('selected');
+      });
+      button.classList.add('selected');
+      document.getElementById('moodMessage').textContent = message;
+    }
+  </script>
+
+</body>
+</html>
